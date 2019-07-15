@@ -1,0 +1,97 @@
+<div class="wp-block-avaz-isotope visible">
+<section class="ns-filters clearfix">
+<ul class="option-set ns-filter-category clearfix uk-subnav uk-subnav-divider" data-option-key="filter">
+<li><a href="#filter" data-project-category-id="all" data-option-value="*" class="selected">All Projects</a></li>
+<?php
+$terms = get_terms("project-category");
+$count = count($terms);
+if ( $count > 0 ){ foreach ( $terms as $term ) { echo "<li><a href='#filter' data-option-value='.".$term->slug."'>" . $term->name . "</a></li>\n"; } } 
+?>
+</ul>
+<ul class="ns-filter-size clearfix">
+ <li>
+<a href="#toggle-sizes" class="toggle-selected"> <svg version="1.1" class="toggle-sizes-large-svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="28px" height="18px" viewBox="0 0 28 18" enable-background="new 0 0 28 18" xml:space="preserve"> <g> <path fill-rule="evenodd" clip-rule="evenodd" fill="none" d="M2,0h14c1.105,0,2,0.895,2,2V16c0,1.104-0.895,2-2,2H2 c-1.105,0-2-0.895-2-2V2C0,0.895,0.895,0,2,0z"></path> <path fill-rule="evenodd" clip-rule="evenodd" fill="none" d="M22.001,0H26c1.105,0,2,0.895,2,2V6C28,7.104,27.105,8,26,8h-3.999 C20.895,8,20,7.104,20,6V2C20,0.895,20.895,0,22.001,0z"></path> <path fill-rule="evenodd" clip-rule="evenodd" fill="none" d="M22.001,10H26c1.105,0,2,0.895,2,1.999V16c0,1.104-0.895,2-2,2 h-3.999C20.895,18,20,17.105,20,16V12C20,10.896,20.895,10,22.001,10z"></path> </g> </svg> </a> <a href="#toggle-sizes"> <svg version="1.1" class="toggle-sizes-small-svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="28px" height="18px" viewBox="0 0 28 18" enable-background="new 0 0 28 18" xml:space="preserve"> <g> <path fill-rule="evenodd" clip-rule="evenodd" fill="none" d="M2.001,0h4C7.104,0,8,0.895,8,2V6c0,1.104-0.896,2-1.999,2h-4 C0.896,8,0,7.104,0,6V2C0,0.895,0.896,0,2.001,0z"></path> <path fill-rule="evenodd" clip-rule="evenodd" fill="none" d="M12,0h4.001C17.105,0,18,0.895,18,2V6c0,1.104-0.895,2-1.998,2H12 c-1.105,0-2-0.896-2-2V2C10,0.895,10.895,0,12,0z"></path> <path fill-rule="evenodd" clip-rule="evenodd" fill="none" d="M22.001,0h4C27.104,0,28,0.895,28,2V6c0,1.104-0.896,2-1.999,2h-4 C20.896,8,20,7.104,20,6V2C20,0.895,20.896,0,22.001,0z"></path> <path fill-rule="evenodd" clip-rule="evenodd" fill="none" d="M2.001,10h4C7.104,10,8,10.895,8,12V16c0,1.104-0.896,2-1.999,2h-4 C0.896,18,0,17.105,0,16V12C0,10.895,0.896,10,2.001,10z"></path> <path fill-rule="evenodd" clip-rule="evenodd" fill="none" d="M12,10h4.001C17.105,10,18,10.895,18,12V16c0,1.104-0.895,2-1.998,2 H12c-1.105,0-2-0.895-2-2V12C10,10.895,10.895,10,12,10z"></path> <path fill-rule="evenodd" clip-rule="evenodd" fill="none" d="M22.001,10h4C27.104,10,28,10.895,28,12V16c0,1.104-0.896,2-1.999,2 h-4C20.896,18,20,17.105,20,16V12C20,10.895,20.896,10,22.001,10z"></path> </g> </svg> </a>
+ </li>
+</ul>
+</section>
+<?php query_posts( array(
+'post_type' => 'portfolio',
+'post_status' => 'publish',								
+'showposts' => 13, 
+'posts_per_page' => 13,
+'orderby' => 'date',
+'order' => 'ASC',
+)); ?>
+<?php $countee = 1; ?>
+<?php if ( have_posts() ) : ?>
+<div id="isotope-list" class="ns-container variable-sizes clearfix" style="position: relative; height: 775px;">
+<?php
+while ( have_posts() ) : the_post();
+$countee++;
+$items = count($posts);
+$count_posts = wp_count_posts();
+if( $countee == 2 ) {
+$isoclass = 'width3 height2';
+}
+elseif( $countee == 3 ) {
+$isoclass = '';
+}
+elseif( $countee == 4 ) {
+$isoclass = '';
+}
+elseif( $countee == 5 ) {
+$isoclass = 'width2 height2';
+}
+elseif( $countee == 6 ) {	
+$isoclass = '';
+}
+elseif( $countee == 7 ) {	
+$isoclass = 'width2 height2';
+}
+elseif( $countee == 8 ) {	
+$isoclass = '';
+}
+elseif( $countee == 9 ) {
+$isoclass = 'height2';	
+}
+elseif( $countee == 10 ) {
+$isoclass = '';
+}
+elseif( $countee == 11 ) {	
+$isoclass = '';
+}
+elseif( $countee == 12 ) {	
+$isoclass = '';
+}
+elseif( $countee == 13 ) {	
+$isoclass = '';
+}
+$termsArray = get_the_terms( $post->ID, "project-category" ); 
+$termsString = ""; 
+foreach ( $termsArray as $term ) { $termsString .= $term->slug.' '; }
+$termsList = array();
+foreach ( $termsArray as $term ) { array_push($termsList, $term->name); }
+$termsClass = array();
+foreach ( $termsArray as $term ) { array_push($termsClass, $term->slug); }
+$solidclasses = implode(' ', $termsClass);
+$classes = array(
+'item',
+$solidclasses,
+$isoclass, );
+?>
+<div id="post-<?php the_ID(); ?>" <?php post_class( $classes ); ?>>
+<a class="thumbnail-project-link" href="<?php the_permalink(); ?>" target="_blank"><?php the_title(); ?></a>
+<div class="thumbnail-meta-data-wrapper">
+<div class="symbol"><?php the_title(); ?>
+</div>
+</div>
+<div class="name"><?php the_title(); ?></div>
+<div class="categories"><?php echo implode(', ', $termsList); ?></div>
+<div style="background-color: <?php echo get_post_meta(get_the_ID(), 'project_colour', TRUE); ?>;" class="thumbnail-hover"></div>
+<img class="project-img" src="<?php if ( has_post_thumbnail() ) { the_post_thumbnail_url( 'full' ); } else { echo '/assets/avaz/images/works/06.jpg'; } ?>" alt="<?php the_title(); ?>">
+<div class="project-thumbnail-background" style="background-color: <?php echo get_post_meta(get_the_ID(), 'project_colour', TRUE); ?>">
+</div>
+</div>
+<?php endwhile; ?>
+</div>
+<?php endif; ?>

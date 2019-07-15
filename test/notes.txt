@@ -1,0 +1,52 @@
+Notes: Snaglist
+
+Services
+	Archive Page: query - 30 mins______
+	Post Content - 45mins******
+	
+Portfolio
+	Coloured Headers - 60mins_______ Black Text with Red, White Text with Red, Black Text with Dark Grey, White Text with Light Grey, Template Selection Field || BG colour definied by Project custom field
+	Post Content, Imagery - 60mins******
+	
+Footer
+	Social Media Links - 10mins*****
+	Footer bottom Links - 10mins*****
+	
+Header
+	
+Modal Popup with Forms - 60mins_________
+	
+Contact Page
+	Design - 45mins_______Form & Text Block
+
+About Page
+	Design - 45mins_______Image & Text Block
+
+Our Team Page
+	Design - 60mins________Cards 2x Col Blocks
+
+Blog
+	Post Content - 30mins******
+	
+Homepage
+	Content - 20mins******
+	Imagery - 10mins*****
+	Posts Query - 30mins_______
+	Services Query_________
+	Portfolio Query - 30mins__________
+	Testimonial - 10mins******
+	Client Logos - 10mins******
+
+SEO Setup - 60mins__________
+
+
+Needed:
+
+Social Media Links:
+Testimonial & client photo (homepage)
+Client Logos - Logo soup? Homepage
+3 Blog posts
+Finalized Portfolio Content, text and images
+Any Video Content
+Location Images - Simon?
+Homepage BG Image - where we have jaoquin phoenix at the mo
